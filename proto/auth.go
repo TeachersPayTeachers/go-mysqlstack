@@ -119,7 +119,7 @@ func (a *Auth) UnPack(payload []byte) error {
 			// Allow fallback to default auth plugin
 			a.pluginName = DefaultAuthPluginName
 		} else {
-			return fmt.Errorf("invalid authPluginName, got %v but only support %v", a.pluginName, DefaultAuthPluginName)
+			return fmt.Errorf("invalid authPluginName, got '%s' but only support %s", a.pluginName, DefaultAuthPluginName)
 		}
 	}
 	return nil
